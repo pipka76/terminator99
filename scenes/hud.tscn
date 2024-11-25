@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dc3g4gamesgvd"]
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerKills" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 89.0
+offset_bottom = 25.0
+text = "Player kills:"
+
+[node name="AiKills" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_right = 192.0
+offset_bottom = 25.0
+text = "AI kills:"
+
+[node name="PlayerKillsValue" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_right = 126.0
+offset_bottom = 23.0
+text = "0"
+
+[node name="AiKillsValue" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_right = 230.0
+offset_bottom = 23.0
+text = "0"

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://byguh6hef5okn"]
+
+[ext_resource type="Script" path="res://scenes/Shot.cs" id="1_bttrv"]
+[ext_resource type="Texture2D" uid="uid://0mb07dnqi2ld" path="res://characters/shots/01.png" id="1_sy65p"]
+[ext_resource type="Texture2D" uid="uid://bngfeywc31qv1" path="res://characters/shots/02.png" id="3_35ydb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hm7yf"]
+radius = 3.0
+height = 10.0
+
+[node name="Shot" type="Area2D"]
+collision_layer = 0
+collision_mask = 14
+script = ExtResource("1_bttrv")
+
+[node name="01" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_sy65p")
+
+[node name="02" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_35ydb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_hm7yf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
